@@ -1,4 +1,4 @@
-module github.com/project-flogo/stream
+module github.com/JCorpse96/stream
 
 require (
 	github.com/project-flogo/core v0.10.1
