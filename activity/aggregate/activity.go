@@ -6,10 +6,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/JCorpse96/stream/activity/aggregate/window"
+	"github.com/JCorpse96/stream/pipeline/support"
 	"github.com/project-flogo/core/activity"
 	"github.com/project-flogo/core/data/metadata"
-	"github.com/project-flogo/stream/activity/aggregate/window"
-	"github.com/project-flogo/stream/pipeline/support"
 )
 
 const (
@@ -21,7 +21,7 @@ const (
 	sdWindow = "window"
 )
 
-//we can generate json from this! - we could also create a "validate-able" object from this
+// we can generate json from this! - we could also create a "validate-able" object from this
 type Settings struct {
 	Function           string `md:"function,required,allowed(avg,sum,min,max,count,accumulate)"`
 	WindowType         string `md:"windowType,required,allowed(tumbling,sliding,timeTumbling,timeSliding)"`

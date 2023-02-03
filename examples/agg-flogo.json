@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "appModel": "1.1.0",
   "imports" : [
-    "github.com/project-flogo/contrib/trigger/rest",
-    "github.com/project-flogo/stream",
-    "github.com/project-flogo/stream/activity/aggregate",
-    "github.com/project-flogo/contrib/activity/log"
+    "github.com/JCorpse96/contrib/trigger/rest",
+    "github.com/JCorpse96/stream",
+    "github.com/JCorpse96/stream/activity/aggregate",
+    "github.com/JCorpse96/contrib/activity/log"
   ],
   "triggers": [
     {

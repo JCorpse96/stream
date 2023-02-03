@@ -8,12 +8,12 @@ import (
 	"os"
 	"strconv"
 
+	"github.com/JCorpse96/stream/pipeline/support"
 	"github.com/gorilla/websocket"
 	"github.com/julienschmidt/httprouter"
 	"github.com/project-flogo/core/data/coerce"
 	"github.com/project-flogo/core/support/log"
 	"github.com/project-flogo/core/support/service"
-	"github.com/project-flogo/stream/pipeline/support"
 )
 
 const (
@@ -70,7 +70,7 @@ func (s *Service) Name() string {
 	return "stream-telemetry"
 }
 
-//DEPRECATED
+// DEPRECATED
 func (s *Service) Enabled() bool {
 	return true
 }
@@ -152,14 +152,12 @@ func listenAndServe(srv *http.Server) error {
 		return err
 	}
 
-
 	fullAddr := srv.Addr
 	if fullAddr[0] == ':' {
 		fullAddr = "0.0.0.0" + srv.Addr
 	}
 
 	logger.Infof("Listening on http://%s", fullAddr)
-
 
 	go func() {
 		defer ln.Close()

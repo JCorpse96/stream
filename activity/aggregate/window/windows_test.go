@@ -3,11 +3,11 @@ package window
 import (
 	"testing"
 
-	"github.com/project-flogo/stream/activity/aggregate/window/functions"
+	"github.com/JCorpse96/stream/activity/aggregate/window/functions"
 	"github.com/stretchr/testify/assert"
 )
 
-//note:  using interface{} 4x slower than using specific types, starting with interface{} for expediency
+// note:  using interface{} 4x slower than using specific types, starting with interface{} for expediency
 func BenchmarkTumblingWindow_AddSample(b *testing.B) {
 
 	w := NewTumblingWindow(functions.AddSampleSum, functions.AggregateSingleAvg, &Settings{Size: 3})

@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"testing"
 
+	"github.com/JCorpse96/stream/pipeline"
 	"github.com/project-flogo/core/action"
 	"github.com/project-flogo/core/app/resource"
 	"github.com/project-flogo/core/engine/channels"
 	"github.com/project-flogo/core/support/test"
-	"github.com/project-flogo/stream/pipeline"
 	"github.com/stretchr/testify/assert"
 )
 

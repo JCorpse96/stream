@@ -3,10 +3,11 @@ package pipeline
 import (
 	"errors"
 	"fmt"
-	"github.com/project-flogo/stream/pipeline/support"
 	"runtime/debug"
 	"strconv"
 	"strings"
+
+	"github.com/JCorpse96/stream/pipeline/support"
 
 	"github.com/project-flogo/core/activity"
 	"github.com/project-flogo/core/data/coerce"
@@ -103,7 +104,7 @@ func (inst *Instance) DoStep(ctx *ExecutionContext, resume bool) (hasWork bool, 
 			done, err = ExecuteCurrentStage(ctx)
 		}
 
-		if t := support.GetTelemetryService(); t != nil  && done {
+		if t := support.GetTelemetryService(); t != nil && done {
 			t.StageFinished(inst.PipelineId(), inst.id, strconv.Itoa(ctx.stageId), ctx.currentOutput)
 		}
 

@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/JCorpse96/stream/pipeline"
 	"github.com/project-flogo/core/action"
 	"github.com/project-flogo/core/app/resource"
 	"github.com/project-flogo/core/data/coerce"
@@ -14,7 +15,6 @@ import (
 	"github.com/project-flogo/core/engine/channels"
 	"github.com/project-flogo/core/support"
 	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/stream/pipeline"
 )
 
 func init() {
