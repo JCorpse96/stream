@@ -2,6 +2,7 @@ package pipeline
 
 import (
 	"fmt"
+
 	"github.com/project-flogo/core/support"
 
 	"github.com/project-flogo/core/activity"
@@ -34,6 +35,7 @@ type StageConfig struct {
 type initContextImpl struct {
 	settings map[string]interface{}
 	mFactory mapper.Factory
+	name     string
 }
 
 func (ctx *initContextImpl) Settings() map[string]interface{} {
@@ -46,6 +48,10 @@ func (ctx *initContextImpl) MapperFactory() mapper.Factory {
 
 func (ctx *initContextImpl) Logger() log.Logger {
 	return log.RootLogger()
+}
+
+func (ctx *initContextImpl) Name() string {
+	return ctx.name
 }
 
 func NewStage(config *StageConfig, mf mapper.Factory, resolver resolve.CompositeResolver) (*Stage, error) {
