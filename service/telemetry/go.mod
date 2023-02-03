@@ -1,4 +1,4 @@
-module github.com/project-flogo/stream/service/telemetry
+module github.com/JCorpse96/stream/service/telemetry
 
 require (
 	github.com/gorilla/websocket v1.4.0
